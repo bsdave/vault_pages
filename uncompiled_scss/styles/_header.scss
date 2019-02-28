@@ -1,0 +1,229 @@
+.header {
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 0 10px;
+
+  position: relative;
+
+  .logo-link {
+    text-decoration: none;
+    color: #939496;
+
+    .logo-box {
+      .logo {
+        display: inline-block;
+        width: auto;
+        height: 45px;
+      }
+
+      span {
+        display: block;
+        font-size: 13px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .menu {
+    .submenu {
+      display: none;
+    }
+
+    .menu-list {
+      width: 100%;
+
+      margin-top: 5px;
+
+      padding: 0;
+      list-style: none;
+      z-index: 1000;
+
+      .menu-item {
+        display: none;
+        margin: 20px 0;
+
+        &.hide {
+          display: none;
+        }
+
+        .menu-link {
+          display: block;
+          color: inherit;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: $fz-medium;
+
+          padding: 13px 10px 15px;
+
+          &.recall {
+            padding: 0;
+            position: relative;
+            width: 100%;
+
+            &:before {
+              content: url("../images/recall.svg");
+            }
+
+            &:after {
+              content: url("../images/dots.svg");
+              position: absolute;
+              bottom: -95px;
+              left: 3px;
+            }
+          }
+        }
+      }
+
+      .menu-item.hamburger-button {
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        right: -5px;
+      }
+    }
+
+    &.opened {
+      background: $color-white;
+      color: #2d2c28;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 30px;
+
+      .menu-list {
+        .menu-item.hamburger-button {
+          right: 5px;
+          margin: 20px;
+        }
+
+        justify-content: space-between;
+
+        .menu-item {
+          display: block;
+          flex-basis: 45%;
+
+          .hamburger {
+            .hamburger-inner,
+            ::after,
+            ::before {
+              background-color: $color-gray;
+            }
+          }
+        }
+      }
+
+      .menu-item:nth-last-child(2) {
+        display: none;
+      }
+
+      .recall {
+        display: none;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .header {
+    padding-top: 40px;
+    padding-bottom: 0;
+
+    .logo {
+      height: 75px;
+    }
+
+    .menu {
+      .toggle {
+        display: none;
+      }
+
+      .menu-flexbox {
+        display: flex;
+        align-items: baseline;
+
+        .w60 {
+          flex-basis: 60%;
+        }
+      }
+
+      .menu-list {
+        position: static;
+        display: flex;
+        align-items: center;
+
+        .menu-item {
+          display: inline-block;
+          margin: 10px;
+
+          .menu-link {
+            &.buy-ticket {
+              margin-left: 0;
+            }
+          }
+
+          .menu-item.active .menu-link,
+          .menu-link:hover,
+          .submenu a:hover {
+            color: $color-yellow;
+          }
+        }
+
+        .menu-item.hamburger-button {
+          display: block;
+          position: initial;
+          margin-left: 25px;
+          right: 20px;
+          margin: 20px;
+        }
+      }
+
+      &.opened {
+        .menu-list {
+          display: flex;
+          flex-wrap: wrap;
+
+          > * {
+            width: 50%;
+          }
+
+          .with-submenu {
+            display: flex;
+            flex-basis: 80%;
+          }
+
+          .submenu {
+            display: block;
+            list-style: none;
+
+            a {
+              display: inline-block;
+              text-decoration: none;
+              color: inherit;
+              font-size: 15px;
+              padding: 13px 10px 15px;
+            }
+          }
+        }
+
+        padding: 0;
+
+        .menu-list {
+          padding-top: 120px;
+          padding-bottom: 120px;
+
+          .menu-item.hamburger-button {
+            text-align: right;
+            position: absolute;
+            right: 20px;
+            margin: 20px;
+          }
+        }
+      }
+    }
+  }
+}

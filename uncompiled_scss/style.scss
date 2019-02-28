@@ -6,13 +6,21 @@
 @import 'styles/fonts';
 @import 'styles/mixins';
 
+@import 'styles/common';
+@import 'styles/header';
+
 body {
   font-family: 'Avenir Next', sans-serif;
   font-style: normal;
   font-weight: normal; 
   font-size: $fz-medium;
+
+  background: black;
+  margin: 0 20px;
 }
 
 @include desktop {
-
+  body {
+    margin: 0;
+  }
 }
