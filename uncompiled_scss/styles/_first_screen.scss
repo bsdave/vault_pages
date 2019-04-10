@@ -1,0 +1,78 @@
+.first-screen-block {
+  background: url("../images/bg-image-1.png") center no-repeat;
+  position: relative;
+
+  .first-screen-body {
+    position: relative;
+    z-index: 8;
+    padding-top: 138px;
+    padding-bottom: 100px;
+  }
+
+  .first-screen-bottom {
+    content: url("../images/fs-m-bg.png");
+    width: 100%;
+    position: relative;
+    z-index: 8;
+
+    &.red {
+      content: url("../images/fs-m-red-bg.png");      
+    }
+  }
+
+  .additional {
+    .info {
+      font-size: 18px;
+      color: white;
+      padding-left: 40px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      &::before {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        content: '';
+
+        left: 0px;
+      }
+
+      &.launch {
+        &::before {
+          display: inline-block;
+          background: url("../images/rocket.svg") center no-repeat;
+        }
+      }
+
+      &.cost {
+        &::before {
+          display: inline-block;
+          background: url("../images/money.svg") center no-repeat;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .first-screen-block {
+    padding-top: 188px;
+    background-size: cover;
+
+    .first-screen-body {
+    }
+
+    .first-screen-bottom {
+      content: url("../images/fs-overlay.png");      
+      width: 100%;
+      position: relative;
+      z-index: 8;
+    
+      &.red {
+        content: url("../images/fs-overlay.png");      
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.button {
+  border-radius: 45px;
+  background: white;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 21px 52px;
+  text-decoration: none;
+  color: #2D2C28;
+  border: none;
+
+  &.dots {
+    position: relative;
+
+    &:after {
+      content: url("../images/dots.svg");
+      position: absolute;
+      transform: rotate(-90deg);
+      top: -17px;
+      right: -73px;
+    }
+  }
+}

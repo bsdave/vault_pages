@@ -1,0 +1,21 @@
+.mt60 {
+  margin-top: 60px;
+}
+
+.sponsor {
+  text-align: center;
+
+  .sponsor-name {
+    display: inline-block;
+    font-size: 16px;
+  }
+}
+
+.partner-image {
+  width:  100%;
+  padding-bottom: 100%;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+}

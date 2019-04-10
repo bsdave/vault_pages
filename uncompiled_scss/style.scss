@@ -8,19 +8,24 @@
 
 @import 'styles/common';
 @import 'styles/header';
+@import 'styles/gradients';
+@import 'styles/first_screen';
+@import 'styles/text_styles';
+@import 'styles/buttons';
 
 body {
   font-family: 'Avenir Next', sans-serif;
   font-style: normal;
   font-weight: normal; 
   font-size: $fz-medium;
-
-  background: black;
-  margin: 0 20px;
 }
 
 @include desktop {
   body {
     margin: 0;
+  }
+
+  .first-screen {
+    height: 500px;
   }
 }
