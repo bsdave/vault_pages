@@ -1,0 +1,39 @@
+.level-test-box {
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  padding: 45px 25px;
+  border-radius: 15px;
+
+  background: url("../images/test-bg-m.png") center no-repeat;
+  background-size: cover;
+
+  .level-test-body {
+    text-align: center;
+
+    .subtitle {
+      color: #2D2C28;
+    }
+  }
+}
+
+@include desktop {
+  .level-test-box {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  
+    padding: 170px 25px 100px;
+    border-radius: 15px;
+  
+    background: url("../images/test-bg.png") center no-repeat;
+    background-size: 100% 100%;
+  
+    .level-test-body {
+      text-align: center;
+  
+      .subtitle {
+        color: #2D2C28;
+      }
+    }
+  }
+}

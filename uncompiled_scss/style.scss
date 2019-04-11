@@ -17,6 +17,8 @@
 @import 'styles/courses';
 @import 'styles/advantages';
 @import 'styles/lead_form';
+@import 'styles/schedule';
+@import 'styles/level_test';
 
 body {
   font-family: 'Avenir Next', sans-serif;
@@ -24,7 +26,7 @@ body {
   font-weight: 100; 
   font-size: $fz-medium;
 
-  height: 3000px;
+  margin-bottom: 200px;
 }
 
 @include desktop {
