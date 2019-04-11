@@ -1,0 +1,70 @@
+.lead-form-box {
+  background: url("../images/form-bg-m.png") center no-repeat;
+  background-size: 100% 100%;
+
+  padding: 100px 0;
+
+  .lead-form-head {
+    text-align: center;
+    .subtitle {
+      color: #2D2C28;
+    }
+  }
+
+  .lead-form-body {
+    .lead-form {
+      .input-group {
+        margin-bottom: 20px;
+
+        .input {
+          font-size: 18px;
+          width: 100%;
+          border-radius: 30px;
+          outline: none;
+          border-style: none;
+
+          height: 60px;
+
+          padding: 0 30px;
+
+          color: #2D2C28;
+          background: #F3D057;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        ::placeholder {
+          color: #2D2C28;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .lead-form-box {
+    background: url("../images/form-bg.png") center no-repeat;
+    background-size: 100% 100%;
+
+    padding: 160px 0 230px;
+    display: flex;
+    align-items: center;
+  
+    .lead-form-head {
+    }
+  
+    .lead-form-body {
+      .lead-form {
+        .input-group {
+          .input {
+          }
+  
+          .button {
+          }
+        }
+      }
+    }
+  }
+}

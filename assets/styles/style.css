@@ -889,6 +889,28 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .advantages .advantage .advantage-description { font-size: 15px; font-weight: 100; color: #83878f; }
 
+.lead-form-box { background: url("../images/form-bg-m.png") center no-repeat; background-size: 100% 100%; padding: 100px 0; }
+
+.lead-form-box .lead-form-head { text-align: center; }
+
+.lead-form-box .lead-form-head .subtitle { color: #2D2C28; }
+
+.lead-form-box .lead-form-body .lead-form .input-group { margin-bottom: 20px; }
+
+.lead-form-box .lead-form-body .lead-form .input-group .input { font-size: 18px; width: 100%; border-radius: 30px; outline: none; border-style: none; height: 60px; padding: 0 30px; color: #2D2C28; background: #F3D057; }
+
+.lead-form-box .lead-form-body .lead-form .input-group .button { width: 100%; }
+
+.lead-form-box .lead-form-body .lead-form .input-group ::-webkit-input-placeholder { color: #2D2C28; }
+
+.lead-form-box .lead-form-body .lead-form .input-group :-ms-input-placeholder { color: #2D2C28; }
+
+.lead-form-box .lead-form-body .lead-form .input-group ::-ms-input-placeholder { color: #2D2C28; }
+
+.lead-form-box .lead-form-body .lead-form .input-group ::placeholder { color: #2D2C28; }
+
+@media (min-width: 992px) { .lead-form-box { background: url("../images/form-bg.png") center no-repeat; background-size: 100% 100%; padding: 160px 0 230px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; } }
+
 body { font-family: 'Avenir Next', sans-serif; font-style: normal; font-weight: 100; font-size: 15px; height: 3000px; }
 
 @media (min-width: 992px) { body { margin: 0; }
