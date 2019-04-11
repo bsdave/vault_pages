@@ -5,6 +5,7 @@
 @import 'styles/variables';
 @import 'styles/fonts';
 @import 'styles/mixins';
+@import 'styles/grid';
 
 @import 'styles/common';
 @import 'styles/header';
@@ -12,12 +13,17 @@
 @import 'styles/first_screen';
 @import 'styles/text_styles';
 @import 'styles/buttons';
+@import 'styles/titles';
+@import 'styles/courses';
+@import 'styles/advantages';
 
 body {
   font-family: 'Avenir Next', sans-serif;
   font-style: normal;
-  font-weight: normal; 
+  font-weight: 100; 
   font-size: $fz-medium;
+
+  height: 3000px;
 }
 
 @include desktop {

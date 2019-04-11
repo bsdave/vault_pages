@@ -1,0 +1,107 @@
+.courses {
+  .course {
+    padding: 50px 20px 50px; 
+    margin-top: 50px;
+
+    border: 1px solid #f6f4ef;
+    border-radius: 15px;
+
+    text-align: center;
+
+    position: relative;
+
+    &:hover {
+      box-shadow: 0 0 60px 0 #928f8752;
+    }
+
+    .logo:before {
+      position: absolute;
+      display: block;
+      width: 92px;
+      height: 92px;
+      content: "";
+
+      top: -46px;
+      right: calc(50% - 46px);
+    }
+
+    .javascript:before {
+      background: url("../images/javascript-logo.svg") center no-repeat;
+    }
+
+    .ruby-on-rails:before {
+      background: url("../images/rails-logo.svg") center no-repeat;
+    }
+
+    .python-django:before {
+      background: url("../images/django-logo.svg") center no-repeat;
+    }
+
+    .english:before {
+      background: url("../images/english-logo.svg") center no-repeat;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+
+    .course-info {
+      display: flex;
+      justify-content: space-evenly;
+
+      .info {
+        text-align: center;
+        font-size: 15px;
+
+        .of {
+          font-weight: 100;
+          margin: 8px 0;
+        }
+
+        .is {
+          font-weight: bold;
+        }
+
+        &::before {
+          width: 30px;
+          height: 30px;
+          content: '';
+  
+          left: 0px;
+          display: inline-block;
+        }
+  
+
+        &.launch::before {
+          background: url("../images/black-rocket.svg") center no-repeat;
+        }
+
+        &.term::before {
+          background: url("../images/black-term.svg") center no-repeat;
+        }
+      }
+    }
+
+    .button-place {
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+
+      > * {
+        flex-basis: 196px;
+      }
+    }
+
+    .price-place {
+      .price {
+        color: #282a2d;
+        font-size: 20px;
+
+        .amount {
+          font-size: 25px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
