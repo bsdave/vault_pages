@@ -1,12 +1,21 @@
 .first-screen-block {
   background: url("../images/bg-image-1.png") center no-repeat;
   position: relative;
+  margin-bottom: 10px;
 
   .first-screen-body {
     position: relative;
     z-index: 8;
-    padding-top: 138px;
-    padding-bottom: 100px;
+    padding-top: 134px;
+    padding-bottom: 91px;
+
+    .next-course-block {
+      display: none;
+    }
+  }
+
+  .first-screen-control {
+    display: none;
   }
 
   .first-screen-bottom {
@@ -17,11 +26,12 @@
     bottom: -1px;
 
     &.red {
-      content: url("../images/fs-m-red-bg.png");      
+      content: url("../images/fs-m-red-bg.png");
     }
   }
 
   .additional {
+    padding: 23px 0 25px;
     .info {
       font-size: 18px;
       color: white;
@@ -29,13 +39,13 @@
       position: relative;
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 17px;
 
       &::before {
         width: 30px;
         height: 30px;
         position: absolute;
-        content: '';
+        content: "";
 
         left: 0px;
       }
@@ -61,18 +71,87 @@
   .first-screen-block {
     padding-top: 188px;
     background-size: cover;
+    font-size: 20px;
+    margin-bottom: 35px;
 
     .first-screen-body {
+      padding-top: 35px;
+      padding-bottom: 141px;
+
+      .additional {
+        display: flex;
+        padding-bottom: 15px;
+
+        .info {
+          margin-right: 15px;
+          font-size: 20px;
+
+          &::before {
+            left: 0px;
+            top: -4px;
+          }
+        }
+      }
+
+      .next-course-block {
+        display: block;
+        text-align: right;
+        padding-top: 35px;
+
+        .link-to-course {
+          display: block;
+          position: relative;
+          padding-top: 95px;
+
+          color: white;
+          text-decoration: none;
+          font-size: 20px;
+
+          &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            content: "";
+            display: block;
+
+            height: 56px;
+            width: 68px;
+
+            background-image: url("../images/next.svg");
+          }
+
+          &:hover {
+            cursor: pointer;
+
+            .half-opacity {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .first-screen-control {
+      display: block;
+      position: relative;
+      z-index: 10;
+      margin-bottom: -18px;
+
+      .controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
     }
 
     .first-screen-bottom {
-      content: url("../images/fs-overlay.png");      
+      content: url("../images/fs-overlay.png");
       width: 100%;
       position: relative;
       z-index: 8;
-    
+
       &.red {
-        content: url("../images/fs-overlay.png");      
+        content: url("../images/fs-overlay.png");
       }
     }
   }

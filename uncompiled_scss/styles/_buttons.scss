@@ -9,6 +9,7 @@
   text-decoration: none;
   color: #2D2C28;
   border: none;
+  letter-spacing: 0.9px;
 
   width: 196px;
   text-align: center;
@@ -26,6 +27,32 @@
       transform: rotate(-90deg);
       top: -17px;
       right: -73px;
+    }
+  }
+}
+
+@include desktop {
+  .button {
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 10px 60px 0 #928f8752;
+    }
+
+    &:active {
+      color: rgba(45, 44, 40, 0.4);
+      box-shadow: none;
+    }
+  
+    &.yellow {
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 20px 60px 0 rgba(255, 219, 96, 0.5);
+      }
+  
+      &:active {
+        color: rgba(45, 44, 40, 0.4);
+        box-shadow: none;
+      }
     }
   }
 }

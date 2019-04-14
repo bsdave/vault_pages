@@ -1,14 +1,13 @@
-.super-big-titile {
-  font-weight: bold;
-  font-size: 30px;
-  color: white;
-}
-
 .description {
   font-size: 18px;
   color: white;
+  margin-top: 0;
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 @include desktop {
-
+  .description {
+    font-size: 20px;
+  }
 }

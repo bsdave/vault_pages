@@ -14,27 +14,41 @@
 @import 'styles/text_styles';
 @import 'styles/buttons';
 @import 'styles/titles';
+@import 'styles/elements';
 @import 'styles/courses';
 @import 'styles/advantages';
 @import 'styles/lead_form';
 @import 'styles/schedule';
 @import 'styles/level_test';
+@import 'styles/partners';
+@import 'styles/reviews';
+@import 'styles/footer';
 
 body {
   font-family: 'Avenir Next', sans-serif;
   font-style: normal;
   font-weight: 100; 
   font-size: $fz-medium;
-
-  margin-bottom: 200px;
 }
 
 @include desktop {
   body {
-    margin: 0;
+
+    &.darkened {
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #08080888;
+        position: fixed;
+        z-index: 18;
+        top: 0;
+        bottom: 0;
+      }
+    }
   }
 
   .first-screen {
-    height: 500px;
   }
 }

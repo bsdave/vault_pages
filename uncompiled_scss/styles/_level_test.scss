@@ -1,8 +1,9 @@
 .level-test-box {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  margin-top: 8px;
+  margin-bottom: 30px;
 
-  padding: 45px 25px;
+
+  padding: 40px 25px;
   border-radius: 15px;
 
   background: url("../images/test-bg-m.png") center no-repeat;
@@ -14,15 +15,19 @@
     .subtitle {
       color: #2D2C28;
     }
+
+    .button {
+      margin-top: 10px;
+    }
   }
 }
 
 @include desktop {
   .level-test-box {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   
-    padding: 170px 25px 100px;
+    padding: 199px 25px 100px;
     border-radius: 15px;
   
     background: url("../images/test-bg.png") center no-repeat;
@@ -33,6 +38,11 @@
   
       .subtitle {
         color: #2D2C28;
+      }
+
+      .button {
+        margin-top: 30px;
+        width: 370px;
       }
     }
   }

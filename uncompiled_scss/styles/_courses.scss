@@ -1,7 +1,14 @@
 .courses {
+  margin-bottom: 10px;
+
+  .courses-body {
+    padding-top: 15px;
+  }
+
   .course {
-    padding: 50px 20px 50px; 
-    margin-top: 50px;
+    padding: 46px 20px 35px; 
+    margin-top: 46px;
+    margin-bottom: 29px;
 
     border: 1px solid #f6f4ef;
     border-radius: 15px;
@@ -11,43 +18,39 @@
     position: relative;
 
     &:hover {
+      cursor: pointer;
       box-shadow: 0 0 60px 0 #928f8752;
     }
 
-    .logo:before {
+    .logo {
       position: absolute;
       display: block;
       width: 92px;
       height: 92px;
-      content: "";
+      border-radius: 50%;
+
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
 
       top: -46px;
       right: calc(50% - 46px);
-    }
-
-    .javascript:before {
-      background: url("../images/javascript-logo.svg") center no-repeat;
-    }
-
-    .ruby-on-rails:before {
-      background: url("../images/rails-logo.svg") center no-repeat;
-    }
-
-    .python-django:before {
-      background: url("../images/django-logo.svg") center no-repeat;
-    }
-
-    .english:before {
-      background: url("../images/english-logo.svg") center no-repeat;
     }
 
     .title {
       font-size: 20px;
     }
 
+    .description {
+      display: none;
+    }
+
     .course-info {
       display: flex;
       justify-content: space-evenly;
+
+      padding-top: 12px;
+      padding-bottom: 13px;
 
       .info {
         text-align: center;
@@ -55,7 +58,8 @@
 
         .of {
           font-weight: 100;
-          margin: 8px 0;
+          margin: 8px 0 0;
+          font-size: 15px;
         }
 
         .is {
@@ -93,6 +97,8 @@
     }
 
     .price-place {
+      padding: 6px;
+
       .price {
         color: #282a2d;
         font-size: 20px;
@@ -101,6 +107,28 @@
           font-size: 25px;
           font-weight: bold;
         }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .courses {
+    padding-top: 100px;
+    background: url('../images/number-77-logo.svg') top center no-repeat;
+
+    .course {
+      background: white;
+
+      .description {
+        display: inline-block;
+        color: #83878F;
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      &:hover {
+        cursor: pointer;
       }
     }
   }
