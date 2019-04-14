@@ -1,5 +1,8 @@
 .first-screen-block {
-  background: url("../images/bg-image-1.png") center no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   position: relative;
   margin-bottom: 10px;
 
@@ -63,6 +66,19 @@
           background: url("../images/money.svg") center no-repeat;
         }
       }
+    }
+  }
+
+  &.usual {
+    margin-bottom: 0;
+
+    .first-screen-body {
+      padding-top: 138px;
+      padding-bottom: 42px;
+    }
+
+    .super-big-title {
+      font-size: 25px;
     }
   }
 }
@@ -152,6 +168,20 @@
 
       &.red {
         content: url("../images/fs-overlay.png");
+      }
+    }
+
+    &.usual {
+      margin-bottom: 15px;
+
+  
+      .first-screen-body {
+        padding-top: 5px;
+        padding-bottom: 42px;
+      }
+  
+      .super-big-title {
+        font-size: 80px;
       }
     }
   }

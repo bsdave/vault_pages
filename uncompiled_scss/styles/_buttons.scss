@@ -14,6 +14,10 @@
   width: 196px;
   text-align: center;
 
+  &.wide {
+    width: 245px;
+  }
+
   &.yellow {
     background: #FFDB60;
   }
