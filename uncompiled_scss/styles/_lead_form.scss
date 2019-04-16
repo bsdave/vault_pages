@@ -66,7 +66,7 @@
     background-size: 100% 100%;
     padding: 113px 0 18px;
     margin-bottom: 0;
-    
+
     .lead-form-head {
       .big-title {
         margin-bottom: 12px;
@@ -98,10 +98,14 @@
         padding: 0;
 
         .input-group {
-          .input {
-          }
+          &.centered {
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
 
-          .button {
+            .button {
+              width: 50%;
+            }
           }
         }
       }
@@ -118,6 +122,21 @@
       background-size: 100% 100%;
       padding: 180px 0 50px;
       margin-top: 60px;
+    }
+
+    &.faq {
+      background: url("../images/faq-footer.png") top center no-repeat;
+      background-size: 100% 100%;
+      padding: 165px 0 42px;
+      margin-top: 33px;
+
+      .lead-form-body {
+        .lead-form {
+          .input-group {
+            margin-bottom: 29px;
+          }
+        }
+      }
     }
 
     .buttons {
