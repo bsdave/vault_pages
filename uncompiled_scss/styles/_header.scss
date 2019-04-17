@@ -92,8 +92,8 @@
     }
 
     &.opened {
-      background: $color-white;
       color: #2d2c28;
+      background: url("../images/vault-menu-77.svg") 128% 100% no-repeat, white;
 
       z-index: 888;
       position: fixed;
@@ -102,7 +102,7 @@
       right: 0;
       bottom: 0;
       overflow-y: scroll;
-      padding: 30px;
+      padding: 30px 15px;
 
       .menu-list {
         .menu-item.hamburger-button {

@@ -6,6 +6,12 @@
   line-height: 1.5;
 }
 
+.descriptions {
+  .description {
+    margin-bottom: 30px;
+  }
+}
+
 @include desktop {
   .description {
     font-size: 20px;

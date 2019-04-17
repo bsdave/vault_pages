@@ -20,3 +20,21 @@
     overflow-x: hidden;
   }
 }
+
+.m-order-0 {
+  order: 0;
+}
+
+.m-order-1 {
+  order: 1;
+}
+
+@include desktop {
+  .d-order-0 {
+    order: 0;
+  }
+  
+  .d-order-1 {
+    order: 1;
+  }
+}

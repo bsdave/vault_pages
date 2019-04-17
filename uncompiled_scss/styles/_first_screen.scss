@@ -12,8 +12,24 @@
     padding-top: 134px;
     padding-bottom: 91px;
 
+    &.with-image {
+      padding-top: 104px;
+      padding-bottom: 20px;
+    }
+
     .next-course-block {
       display: none;
+    }
+
+    .descriptions {
+      .description {
+        line-height: 1.4;
+      }
+    }
+
+    .first-screen-image {
+      width: 100%;
+      margin-bottom: 18px;
     }
   }
 
@@ -75,6 +91,11 @@
     .first-screen-body {
       padding-top: 138px;
       padding-bottom: 42px;
+
+      &.with-image {
+        padding-top: 104px;
+        padding-bottom: 20px;
+      }
     }
 
     .super-big-title {
@@ -107,6 +128,21 @@
             top: -4px;
           }
         }
+      }
+
+      .descriptions {
+        padding-right: 15%;
+        margin-bottom: 100px;
+        padding-top: 13px;
+
+        .description {
+          line-height: 1.4;
+        }
+      }
+  
+      .first-screen-image {
+        width: 100%;
+        margin-bottom: -60px;
       }
 
       .next-course-block {
@@ -178,6 +214,15 @@
       .first-screen-body {
         padding-top: 5px;
         padding-bottom: 42px;
+
+        &.with-image {
+          padding-top: 0;
+          padding-bottom: 20px;
+
+          .d-order-0 {
+            padding-top: 55px;
+          }
+        }
       }
   
       .super-big-title {
