@@ -18,6 +18,17 @@
   opacity: 0.5;
 }
 
+.align-right {
+  text-align: right;
+}
+
+.title {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
 @include desktop {
 
 }

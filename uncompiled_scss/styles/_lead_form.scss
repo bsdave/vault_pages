@@ -25,32 +25,6 @@
     padding: 23px 0;
 
     .lead-form {
-      .input-group {
-        margin-bottom: 16px;
-
-        .input {
-          font-size: 18px;
-          width: 100%;
-          border-radius: 30px;
-          outline: none;
-          border-style: none;
-
-          height: 60px;
-
-          padding: 0 30px;
-
-          color: #2d2c28;
-          background: #f3d057;
-        }
-
-        .button {
-          width: 100%;
-        }
-
-        ::placeholder {
-          color: #2d2c28;
-        }
-      }
     }
 
     .buttons {
@@ -75,6 +49,33 @@
   }
 }
 
+.input-group {
+  margin-bottom: 16px;
+
+  .input {
+    font-size: 18px;
+    width: 100%;
+    border-radius: 30px;
+    outline: none;
+    border-style: none;
+
+    height: 60px;
+
+    padding: 0 30px;
+
+    color: #2d2c28;
+    background: #f3d057;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  ::placeholder {
+    color: #2d2c28;
+  }
+}
+
 @include desktop {
   .lead-form-box {
     background: url("../images/form-bg.png") center no-repeat;
@@ -96,18 +97,6 @@
 
       .lead-form {
         padding: 0;
-
-        .input-group {
-          &.centered {
-            text-align: center;
-            margin-right: auto;
-            margin-left: auto;
-
-            .button {
-              width: 50%;
-            }
-          }
-        }
       }
     }
 
@@ -148,6 +137,18 @@
         margin-left: 15px;
         margin-right: 15px;
         margin-bottom: 21px;
+      }
+    }
+  }
+
+  .input-group {
+    &.centered {
+      text-align: center;
+      margin-right: auto;
+      margin-left: auto;
+
+      .button {
+        width: 50%;
       }
     }
   }
