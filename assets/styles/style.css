@@ -865,7 +865,7 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .first-screen-block.post-show .super-big-title { font-size: 25px; line-height: 1.3; padding-right: 10%; }
 
-@media (min-width: 992px) { .first-screen-block { padding-top: 188px; background-size: cover; font-size: 20px; margin-bottom: 35px; }
+@media (min-width: 576px) { .first-screen-block { padding-top: 188px; background-size: cover; font-size: 20px; margin-bottom: 35px; }
   .first-screen-block .first-screen-body { padding-top: 35px; padding-bottom: 141px; }
   .first-screen-block .first-screen-body .additional { display: -webkit-box; display: -ms-flexbox; display: flex; padding-bottom: 15px; }
   .first-screen-block .first-screen-body .additional .info { margin-right: 15px; font-size: 20px; }
@@ -1281,7 +1281,7 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .questions-box .questions .question { color: #928f87; font-weight: bold; font-size: 15px; }
 
-.questions-box .questions .question .link { text-decoration: none; color: inherit; }
+.questions-box .questions .question .link { display: block; text-decoration: none; color: inherit; }
 
 .questions-box .questions .question:hover, .questions-box .questions .question.active { color: #282a2d; }
 
@@ -1473,6 +1473,36 @@ input[type="number"] { -moz-appearance: textfield; }
 @media (min-width: 992px) { .post-show-box h1, .post-show-box h2, .post-show-box h3, .post-show-box h4, .post-show-box h5, .post-show-box h6 { margin-bottom: 25px; line-height: 1.5; letter-spacing: 0.5px; }
   .post-show-box p { margin-bottom: 30px; font-size: 20px; line-height: 1.5; letter-spacing: 0.5px; }
   .post-show-box .author { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin-top: 72px; padding-top: 15px; padding-bottom: 135px; } }
+
+.contacts-box .contacts { margin: 0; padding: 0; list-style: none; padding-top: 2px; margin-bottom: 47px; }
+
+.contacts-box .contacts .contact { padding-left: 52px; position: relative; margin-bottom: 26px; }
+
+.contacts-box .contacts .contact .title { color: #282a2d; font-size: 15px; margin-top: 0; margin-bottom: 10px; }
+
+.contacts-box .contacts .contact .description { color: #282a2d; font-size: 15px; margin-top: 0; margin-bottom: 10px; }
+
+.contacts-box .contacts .contact .link { color: inherit; display: inline-block; text-decoration: none; }
+
+.contacts-box .contacts .contact.compass::before, .contacts-box .contacts .contact.phone::before, .contacts-box .contacts .contact.email::before, .contacts-box .contacts .contact.skype::before { position: absolute; content: ""; display: block; height: 20px; width: 20px; left: 12px; top: -4px; }
+
+.contacts-box .contacts .contact.compass::before { background: url("../images/compass-logo.svg") center no-repeat; background-size: contain; top: 0; }
+
+.contacts-box .contacts .contact.phone::before { background: url("../images/phone-logo.svg") center no-repeat; background-size: contain; }
+
+.contacts-box .contacts .contact.email::before { background: url("../images/email-logo.svg") center no-repeat; background-size: contain; }
+
+.contacts-box .contacts .contact.skype::before { background: url("../images/skype-logo.svg") center no-repeat; background-size: contain; }
+
+.contacts-box .map-box { margin-bottom: 32px; width: 233px; height: 233px; margin: auto; border-radius: 50%; overflow: hidden; }
+
+@media (min-width: 992px) { .contacts-box { margin-bottom: 64px; }
+  .contacts-box .contacts { padding-top: 24px; margin-bottom: 47px; }
+  .contacts-box .contacts .contact { padding-left: 66px; margin-left: 90px; margin-bottom: 43px; }
+  .contacts-box .contacts .contact .title { font-size: 20px; margin-bottom: 2px; }
+  .contacts-box .contacts .contact .description { font-size: 20px; margin-bottom: 10px; }
+  .contacts-box .contacts .contact.compass::before, .contacts-box .contacts .contact.phone::before, .contacts-box .contacts .contact.email::before, .contacts-box .contacts .contact.skype::before { position: absolute; content: ""; display: block; height: 24px; width: 24px; left: 12px; top: -4px; }
+  .contacts-box .map-box { width: 430px; height: 430px; } }
 
 body { font-family: 'Avenir Next', sans-serif; font-style: normal; font-weight: 100; font-size: 15px; }
 
