@@ -1504,6 +1504,31 @@ input[type="number"] { -moz-appearance: textfield; }
   .contacts-box .contacts .contact.compass::before, .contacts-box .contacts .contact.phone::before, .contacts-box .contacts .contact.email::before, .contacts-box .contacts .contact.skype::before { position: absolute; content: ""; display: block; height: 24px; width: 24px; left: 12px; top: -4px; }
   .contacts-box .map-box { width: 430px; height: 430px; } }
 
+.students-box { padding-top: 1px; padding-bottom: 15px; }
+
+.students-box .students .student { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 30px 22px; margin-bottom: 25px; border: 1px solid #f6f4ef; border-radius: 15px; }
+
+.students-box .students .student .student-image { display: block; width: 92px; height: 92px; border-radius: 50%; background-size: contain; margin-top: 0; margin-bottom: 20px; }
+
+.students-box .students .student .course { display: block; color: #83878f; margin-top: 0; margin-bottom: 10px; text-transform: uppercase; font-size: 13px; font-weight: bold; padding-right: 20%; padding-left: 20%; text-align: center; letter-spacing: 1px; }
+
+.students-box .students .student .student-name { color: #282a2d; font-size: 20px; margin-top: 0; margin-bottom: 10px; }
+
+.students-box .students .student .student-story { color: #83878f; font-size: 15px; text-align: center; margin-top: 0; margin-bottom: 22px; line-height: 1.7; }
+
+.students-box .students .student .read-more { display: block; width: 100%; background: url("../images/blog-arrow.svg") center no-repeat; height: 9px; }
+
+.students-box .load-more-button { text-align: center; margin-bottom: 47px; }
+
+@media (min-width: 992px) { .students-box { padding-top: 20px; }
+  .students-box .students .student { padding: 40px; margin-bottom: 29px; }
+  .students-box .students .student .student-image { height: 170px; width: 170px; margin-bottom: 30px; }
+  .students-box .students .student .course { padding: 0; margin-bottom: 12px; }
+  .students-box .students .student .student-name { font-size: 25px; margin-bottom: 13px; }
+  .students-box .students .student .student-story { margin-bottom: 28px; }
+  .students-box .students .student:hover { cursor: pointer; -webkit-box-shadow: 0 0 60px 0 #928f8752; box-shadow: 0 0 60px 0 #928f8752; }
+  .students-box .load-more-button { margin-top: 30px; margin-bottom: 20px; } }
+
 body { font-family: 'Avenir Next', sans-serif; font-style: normal; font-weight: 100; font-size: 15px; }
 
 @media (min-width: 992px) { body.darkened::before { content: ""; display: block; width: 100%; height: 100%; background: #08080888; position: fixed; z-index: 18; top: 0; bottom: 0; } }
