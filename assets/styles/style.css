@@ -735,8 +735,8 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .m-order-1 { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
 
-@media (min-width: 992px) { .d-order-0 { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
-  .d-order-1 { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; } }
+@media (min-width: 576px) { .t-order-0 { -webkit-box-ordinal-group: 1; -ms-flex-order: 0; order: 0; }
+  .t-order-1 { -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; } }
 
 .img-block { display: block; width: 100%; height: auto; }
 
@@ -831,6 +831,8 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .first-screen-block .first-screen-body .first-screen-image { width: 100%; margin-bottom: 18px; }
 
+.first-screen-block .first-screen-body .first-screen-image-wide { display: block; height: 240px; margin-left: -25px; margin-right: -25px; background-size: 145% 100%; background-repeat: no-repeat; background-position: 75% 22%; z-index: 44; position: relative; margin-bottom: 38px; margin-top: 11px; }
+
 .first-screen-block .first-screen-control { display: none; }
 
 .first-screen-block .first-screen-bottom { content: url("../images/fs-m-bg.png"); width: 100%; position: relative; z-index: 8; bottom: -1px; }
@@ -885,13 +887,16 @@ input[type="number"] { -moz-appearance: textfield; }
   .first-screen-block.usual { margin-bottom: 15px; }
   .first-screen-block.usual .first-screen-body { padding-top: 5px; padding-bottom: 42px; }
   .first-screen-block.usual .first-screen-body.with-image { padding-top: 0; padding-bottom: 20px; }
-  .first-screen-block.usual .first-screen-body.with-image .d-order-0 { padding-top: 55px; }
-  .first-screen-block.usual .super-big-title { font-size: 80px; }
+  .first-screen-block.usual .first-screen-body.with-image .t-order-0 { padding-top: 55px; }
+  .first-screen-block.usual .super-big-title { font-size: 40px; }
   .first-screen-block.post-show { padding-top: 200px; margin-bottom: 15px; }
   .first-screen-block.post-show .first-screen-body { padding-top: 5px; padding-bottom: 42px; }
   .first-screen-block.post-show .first-screen-body.with-image { padding-top: 0; padding-bottom: 20px; }
-  .first-screen-block.post-show .first-screen-body.with-image .d-order-0 { padding-top: 55px; }
+  .first-screen-block.post-show .first-screen-body.with-image .t-order-0 { padding-top: 55px; }
   .first-screen-block.post-show .super-big-title { font-size: 60px; padding-right: 10%; line-height: 1; } }
+
+@media (min-width: 992px) { .first-screen-block .first-screen-body .first-screen-image-wide { height: 100%; background-size: 200% 100%; background-position: 38% 10%; z-index: -1; margin-bottom: -100px; margin-top: 11px; margin-left: -100%; }
+  .first-screen-block.usual .super-big-title { font-size: 80px; } }
 
 .description { font-size: 18px; color: white; margin-top: 0; margin-bottom: 10px; line-height: 1.5; }
 
@@ -1045,6 +1050,8 @@ input[type="number"] { -moz-appearance: textfield; }
   .lead-form-box.employment { background: url("../images/employment-bg.png") top center no-repeat; background-size: 100% 100%; padding: 180px 0 50px; margin-top: 60px; }
   .lead-form-box.faq { background: url("../images/faq-footer.png") top center no-repeat; background-size: 100% 100%; padding: 165px 0 42px; margin-top: 33px; }
   .lead-form-box.faq .lead-form-body .lead-form .input-group { margin-bottom: 29px; }
+  .lead-form-box.financing { background: url("../images/financing-form-bg.png") top center no-repeat; background-size: 100% 100%; padding: 165px 0 42px; margin-top: 33px; }
+  .lead-form-box.financing .lead-form-head { padding-left: 10%; padding-right: 10%; }
   .lead-form-box .buttons { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
   .lead-form-box .buttons .button { -ms-flex-preferred-size: 370px; flex-basis: 370px; margin-left: 15px; margin-right: 15px; margin-bottom: 21px; }
   .input-group.centered { text-align: center; margin-right: auto; margin-left: auto; }
@@ -1571,6 +1578,56 @@ input[type="number"] { -moz-appearance: textfield; }
 .horizontal-scrolling-container .horizontal-scrolling-controls, .horizontal-scrolling-container .horizontal-scrolling-content { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; overflow-x: auto; }
 
 .horizontal-scrolling-container .horizontal-scrolling-controls .scrolling-item, .horizontal-scrolling-container .horizontal-scrolling-content .scrolling-item { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 100%; }
+
+.financing-box { margin-bottom: 69px; }
+
+.financing-box .financing-head { text-align: center; margin-bottom: 13px; }
+
+.financing-box .financing-body { padding-top: 54px; padding-bottom: 13px; background: url("../images/financing-main-bg-m.png") center no-repeat; background-size: 100% 100%; }
+
+.financing-box .financing-body .financing { padding-left: 35px; padding-top: 0px; padding-bottom: 40px; margin-top: 10px; }
+
+.financing-box .financing-body .financing .title { font-size: 40px; color: #282a2d; margin-top: 0; margin-bottom: 3px; }
+
+.financing-box .financing-body .financing .title .percent { font-weight: normal; }
+
+.financing-box .financing-body .financing .explanation .explanation-title { color: #282a2d; font-size: 18px; margin-top: 0; margin-bottom: 10px; }
+
+.financing-box .financing-body .financing .explanation .explanation-text { color: #2d2c28; font-size: 15px; line-height: 1.7; margin-top: 0; margin-bottom: 10px; }
+
+@media (min-width: 576px) { .financing-box { margin-bottom: 69px; padding-top: 25px; }
+  .financing-box .financing-head { text-align: center; margin-bottom: 13px; padding-right: 20%; padding-left: 20%; }
+  .financing-box .financing-body .all-financing { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
+
+@media (min-width: 992px) { .financing-box { margin-bottom: 139px; padding-top: 25px; }
+  .financing-box .financing-head { text-align: center; margin-bottom: 69px; padding-right: 20%; padding-left: 20%; }
+  .financing-box .financing-body { padding-top: 79px; padding-bottom: 0px; background: url("../images/financing-main-bg.png") center no-repeat; background-size: 88% 100%; }
+  .financing-box .financing-body .all-financing { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+  .financing-box .financing-body .financing { padding-left: 35px; padding-top: 0px; padding-bottom: 85px; margin: 0 22%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+  .financing-box .financing-body .financing .title { font-size: 100px; color: #282a2d; margin-top: 0; margin-bottom: 3px; width: 178px; text-align: right; -ms-flex-negative: 0; flex-shrink: 0; }
+  .financing-box .financing-body .financing .title .percent { font-weight: normal; font-size: 50px; }
+  .financing-box .financing-body .financing .explanation { padding-left: 40px; }
+  .financing-box .financing-body .financing .explanation .explanation-title { color: #282a2d; font-size: 18px; margin-top: 0; margin-bottom: 10px; }
+  .financing-box .financing-body .financing .explanation .explanation-text { color: #2d2c28; font-size: 15px; line-height: 1.7; margin-top: 0; margin-bottom: 10px; } }
+
+.financing-points-box .financing-point { margin-bottom: 52px; }
+
+.financing-points-box .financing-point .financing-point-image { margin-bottom: 25px; }
+
+.financing-points-box .financing-point .financing-point-image .fin-image { display: block; width: 100%; }
+
+.financing-points-box .financing-point .financing-point-text { padding-left: 10px; padding-right: 10px; }
+
+.financing-points-box .financing-point .financing-point-text .title { margin-top: 0; margin-bottom: 10px; color: #282A2D; font-size: 30px; }
+
+.financing-points-box .financing-point .financing-point-text .text { margin-top: 0; margin-bottom: 10px; color: #83878F; font-size: 18px; line-height: 1.4; }
+
+@media (min-width: 992px) { .financing-points-box .financing-point { margin-bottom: 45px; }
+  .financing-points-box .financing-point .financing-point-image { margin-bottom: 25px; }
+  .financing-points-box .financing-point .financing-point-image .fin-image { display: block; width: 80%; }
+  .financing-points-box .financing-point .financing-point-text { margin-top: 15px; padding-left: 0; padding-right: 20%; }
+  .financing-points-box .financing-point .financing-point-text .title { margin-top: 0; margin-bottom: 10px; color: #282A2D; font-size: 50px; }
+  .financing-points-box .financing-point .financing-point-text .text { margin-top: 0; margin-bottom: 10px; color: #83878F; font-size: 20px; line-height: 1.4; } }
 
 body { font-family: 'Avenir Next', sans-serif; font-style: normal; font-weight: 100; font-size: 15px; }
 

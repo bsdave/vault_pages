@@ -29,12 +29,12 @@
   order: 1;
 }
 
-@include desktop {
-  .d-order-0 {
+@include tablet {
+  .t-order-0 {
     order: 0;
   }
   
-  .d-order-1 {
+  .t-order-1 {
     order: 1;
   }
 }
