@@ -1169,7 +1169,7 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .reviews-box .reviews-body .review .review-text { margin-top: 0; font-size: 15px; line-height: 1.7; letter-spacing: 0.3px; }
 
-.reviews-box .reviews-body .review .video-preview { position: relative; display: block; width: 100%; height: 108px; margin-top: 21px; margin-bottom: 16px; border-radius: 15px; background-size: contain; background-repeat: no-repeat; background-position: center; }
+.reviews-box .reviews-body .review .video-preview { position: relative; display: block; width: 100%; height: 108px; margin-top: 21px; margin-bottom: 16px; border-radius: 15px; background-size: cover; background-repeat: no-repeat; background-position: center; }
 
 .reviews-box .reviews-body .review .video-preview::before { content: ''; position: absolute; z-index: 2; display: block; border-radius: 15px; top: 0; bottom: 0; left: 0; right: 0; background: url("../images/play-icon.svg") center no-repeat, #00000069; }
 
@@ -1178,7 +1178,7 @@ input[type="number"] { -moz-appearance: textfield; }
   .reviews-box .reviews-body .review .reviewer-photo { position: absolute; z-index: 55; top: -35px; left: 40px; border-radius: 50%; height: 70px; width: 70px; }
   .reviews-box .reviews-body .review .reviewer-name { margin-top: 0; margin-bottom: 20px; font-size: 20px; }
   .reviews-box .reviews-body .review .review-text { font-size: 20px; line-height: 1.75; }
-  .reviews-box .reviews-body .review .video-preview { position: relative; display: block; width: 100%; height: 205px; border-radius: 15px; background-size: contain; background-repeat: no-repeat; background-position: center; margin-top: 25px; margin-bottom: 10px; }
+  .reviews-box .reviews-body .review .video-preview { position: relative; display: block; width: 100%; height: 205px; border-radius: 15px; margin-top: 25px; margin-bottom: 10px; }
   .reviews-box .reviews-body .review .video-preview::before { content: ''; position: absolute; z-index: 2; display: block; border-radius: 15px; top: 0; bottom: 0; left: 0; right: 0; background: url("../images/play-icon.svg") center no-repeat, #00000069; } }
 
 .footer { background: #282a2d; position: relative; padding-bottom: 70px; }
@@ -1322,7 +1322,7 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .graduates-box ::-webkit-scrollbar { display: none; }
 
-.graduates-box .graduates-body .graduates { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.graduates-box .graduates-body .graduates { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 .graduates-box .graduates-body .graduates .graduate { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 100%; }
 
@@ -1528,6 +1528,49 @@ input[type="number"] { -moz-appearance: textfield; }
   .students-box .students .student .student-story { margin-bottom: 28px; }
   .students-box .students .student:hover { cursor: pointer; -webkit-box-shadow: 0 0 60px 0 #928f8752; box-shadow: 0 0 60px 0 #928f8752; }
   .students-box .load-more-button { margin-top: 30px; margin-bottom: 20px; } }
+
+.reviews-place-box { padding-top: 25px; padding-bottom: 60px; }
+
+.reviews-place-box .reviews-controls { margin-bottom: 16px; }
+
+.reviews-place-box .reviews-controls .controller { padding-top: 1px; padding-bottom: 1px; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; overflow-x: auto; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-overflow-scrolling: touch; width: 260px; margin: 0 auto; }
+
+.reviews-place-box .reviews-controls .controller .control { margin-right: 6px; margin-left: 6px; }
+
+.reviews-place-box .reviews-controls .controller .control .control-image { display: block; height: 35px; width: 35px; background-size: cover; background-position: center; border-radius: 50%; }
+
+.reviews-place-box .reviews-controls .controller .control.active { border: 1px solid #ffdb60; border-radius: 50%; padding: 5px; }
+
+.reviews-place-box .reviews-controls .controller .control.active .control-image { height: 50px; width: 50px; }
+
+.reviews-place-box .reviews .review .review-body { text-align: center; padding: 0 10px; }
+
+.reviews-place-box .reviews .review .review-body .reviewer-name { font-size: 25px; color: #282a2d; margin-top: 0; margin-bottom: 18px; }
+
+.reviews-place-box .reviews .review .review-body .review-text { font-size: 15px; color: #282a2d; line-height: 1.7; margin-top: 0; margin-bottom: 10px; }
+
+.reviews-place-box .reviews .review .review-body .review-video-preview { position: relative; display: block; width: 100%; height: 205px; border-radius: 15px; background-size: cover; background-repeat: no-repeat; background-position: center; margin-top: 25px; margin-bottom: 10px; }
+
+.reviews-place-box .reviews .review .review-body .review-video-preview::before { content: ""; position: absolute; z-index: 2; display: block; border-radius: 15px; top: 0; bottom: 0; left: 0; right: 0; background: url("../images/play-icon.svg") center no-repeat, #00000069; }
+
+.reviews-place-box .reviews .review .review-body .quote { display: inline-block; height: 30px; width: 34px; background: url("../images/quote.svg") center no-repeat; background-size: contain; margin-top: 20px; }
+
+@media (min-width: 992px) { .reviews-place-box { padding-top: 0; padding-bottom: 0; }
+  .reviews-place-box .reviews-controls { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 25px; }
+  .reviews-place-box .reviews-controls .controller { width: 478px; margin: 0; margin-right: -20px; margin-left: -20px; }
+  .reviews-place-box .reviews-controls .controller .control { margin-right: 20px; margin-left: 20px; }
+  .reviews-place-box .reviews-controls .controller .control .control-image { height: 50px; width: 50px; }
+  .reviews-place-box .reviews-controls .controller .control.active { margin: 0 15px; }
+  .reviews-place-box .reviews-controls .controller .control.active .control-image { height: 78px; width: 78px; }
+  .reviews-place-box .reviews .review .review-body { padding: 0 10%; }
+  .reviews-place-box .reviews .review .review-body .review-text { letter-spacing: 0.3px; }
+  .reviews-place-box .reviews .review .review-body .quote { height: 37px; width: 42px; } }
+
+.horizontal-scrolling-container ::-webkit-scrollbar { display: none; }
+
+.horizontal-scrolling-container .horizontal-scrolling-controls, .horizontal-scrolling-container .horizontal-scrolling-content { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; overflow-x: auto; }
+
+.horizontal-scrolling-container .horizontal-scrolling-controls .scrolling-item, .horizontal-scrolling-container .horizontal-scrolling-content .scrolling-item { -webkit-box-flex: 0; -ms-flex: 0 0 auto; flex: 0 0 auto; width: 100%; }
 
 body { font-family: 'Avenir Next', sans-serif; font-style: normal; font-weight: 100; font-size: 15px; }
 

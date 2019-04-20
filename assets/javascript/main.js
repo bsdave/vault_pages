@@ -26,25 +26,24 @@ $(function () {
     $('html, body').stop();
     const anchor = $(this).attr('href');
 
-    moveToGraduate(anchor);
+    moveToAnchor(anchor);
 
     $('.control').removeClass('active');
     $(this).addClass('active');
   });
 
-  activateFirstGraduate();
+  activateFirstItem();
 
   $('.certificate').on('click', function () {
-    // $('.certificate').toggleClass('active');
     $(this).toggleClass('active');
   });
 });
 
-const moveToGraduate = (anchor) => {
-  const graduateNumber = anchor.match(/\d+/g).map(Number)[0];
+const moveToAnchor = (anchor) => {
+  const anchorNumber = anchor.match(/\d+/g).map(Number)[0];
 
   $('.horizontal-scrolling-content').stop().animate({
-    scrollLeft: findGraduatePosition(graduateNumber)
+    scrollLeft: findAnchorPosition(anchorNumber)
   }, 1000);
 }
 
@@ -55,16 +54,18 @@ const getContainerIndent = (container) => {
   return margin + padding;
 }
 
-const findGraduatePosition = (graduateNumber) => {
-  const indent = getContainerIndent($('.graduates-box .container'));
-  $('.graduate').css('margin-right', indent);
+const findAnchorPosition = (anchorNumber) => {
+  const indent = getContainerIndent($('.horizontal-scrolling-container'));
+  $('.scrolling-item').css('margin-right', indent);
 
-  const graduateFullWidth = $('.graduate').width() + indent;
+  const itemFullWidth = $('.scrolling-item').width() + indent;
 
-  return (graduateNumber - 1) * graduateFullWidth;
+  return (anchorNumber - 1) * itemFullWidth;
 }
 
-const activateFirstGraduate = () => {
-  moveToGraduate('#graduate1');
-  $('.control:first-child').addClass('active');
+const activateFirstItem = () => {
+  // $('.horizontal-scrolling-controls .control:first-child').click();
+  $('.horizontal-scrolling-controls .control:nth-child(3)').click();
+
+
 }

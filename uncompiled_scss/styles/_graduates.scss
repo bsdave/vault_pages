@@ -13,9 +13,6 @@
   .graduates-body {
     .graduates {
       display: flex;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
 
       .graduate {
         flex: 0 0 auto;
