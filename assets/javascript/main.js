@@ -37,6 +37,15 @@ $(function () {
   $('.certificate').on('click', function () {
     $(this).toggleClass('active');
   });
+
+  $('.carousel-body').slick({
+    nextArrow: $('.next-course'),
+    dots: true,
+    appendDots: '.slides-control',
+    speed: 800,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  });
 });
 
 const moveToAnchor = (anchor) => {
