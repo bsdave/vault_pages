@@ -38,6 +38,10 @@ $(function () {
     $(this).toggleClass('active');
   });
 
+  $('.close-modal').on('click', function () {
+    $(this).parents('.modal').toggleClass('opened');
+  });
+
   $('.carousel-body').slick({
     nextArrow: $('.next-course'),
     dots: true,
