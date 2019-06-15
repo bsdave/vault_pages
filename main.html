@@ -9,6 +9,7 @@
   <script src="https://code.jquery.com/jquery-3.4.0.min.js"
     integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
   <script src="assets/javascript/main.js"></script>
+  <script src="assets/javascript/slick.js"></script>
   <title>Main page</title>
 </head>
 
@@ -69,27 +70,104 @@
     </div>
   </div>
 
-  <div class="first-screen-block gradient gradient-red" style="background-image: url(assets/images/bg-image-1.png)">
-    <div class="first-screen-body">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-lg-10">
-            <h1 class="super-big-title">Ruby on Rails</h1>
-            <p class="description">Универсальный язык и популярный веб-фреймворк</p>
-            <div class="additional">
-              <div class="info launch">Старт: 12 Янв. 2019</div>
-              <div class="info cost">25 000 тг/мес</div>
-            </div>
-            <a class="button dots" href="#">Записаться</a>
-          </div>
-          <div class="col-lg-2">
-            <div class="next-course-block">
-              <a href="#" class="link-to-course"><span class="half-opacity">Python: Django</span></a>
+  <div class="first-screeen-carousel">
+    <div class="carousel-body">
+
+      <div class="first-screen-block gradient gradient-red" style="background-image: url(assets/images/bg-image-1.png)">
+        <div class="first-screen-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10">
+                <h1 class="super-big-title">Ruby on Rails</h1>
+                <p class="description">Универсальный язык и популярный веб-фреймворк</p>
+                <div class="additional">
+                  <div class="info launch">Старт: 12 Янв. 2019</div>
+                  <div class="info cost">25 000 тг/мес</div>
+                </div>
+                <a class="button dots" href="#">Записаться</a>
+              </div>
+              <div class="col-md-2">
+                <div class="next-course-block">
+                  <span class="next-course link-to-course"><span class="half-opacity">Python: Django</span></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
+
+      <div class="first-screen-block gradient gradient-blue"
+        style="background-image: url(assets/images/bg-image-python.jpg)">
+        <div class="first-screen-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10">
+                <h1 class="super-big-title">Python: Django</h1>
+                <p class="description">Универсальный язык и популярный веб-фреймворк</p>
+                <div class="additional">
+                  <div class="info launch">Старт: 12 Янв. 2019</div>
+                  <div class="info cost">25 000 тг/мес</div>
+                </div>
+                <a class="button dots" href="#">Записаться</a>
+              </div>
+              <div class="col-md-2">
+                <div class="next-course-block">
+                  <span class="next-course link-to-course"><span class="half-opacity">Java Script</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="first-screen-block gradient gradient-yellow"
+        style="background-image: url(assets/images/bg-image-js.jpg)">
+        <div class="first-screen-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10">
+                <h1 class="super-big-title">Java Script</h1>
+                <p class="description">Универсальный язык и популярный веб-фреймворк</p>
+                <div class="additional">
+                  <div class="info launch">Старт: 12 Янв. 2019</div>
+                  <div class="info cost">25 000 тг/мес</div>
+                </div>
+                <a class="button dots" href="#">Записаться</a>
+              </div>
+              <div class="col-md-2">
+                <div class="next-course-block">
+                  <span class="next-course link-to-course"><span class="half-opacity">English</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="first-screen-block gradient gradient-blue-to-red"
+        style="background-image: url(assets/images/bg-image-english.jpg)">
+        <div class="first-screen-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10">
+                <h1 class="super-big-title">English</h1>
+                <p class="description">Универсальный язык и популярный веб-фреймворк</p>
+                <div class="additional">
+                  <div class="info launch">Старт: 12 Янв. 2019</div>
+                  <div class="info cost">25 000 тг/мес</div>
+                </div>
+                <a class="button dots" href="#">Записаться</a>
+              </div>
+              <div class="col-md-2">
+                <div class="next-course-block">
+                  <span class="next-course link-to-course"><span class="half-opacity">Ruby on Rails</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="first-screen-control">
@@ -100,13 +178,8 @@
           </div>
 
           <div class="center">
-            <ul class="pagination">
-              <li class="item"></li>
-              <li class="item"></li>
-              <li class="item active"></li>
-              <li class="item"></li>
-              <li class="item"></li>
-            </ul>
+            <div class="slides-control">
+            </div>
           </div>
           <div class="right">
             <ul class="language-selector">
