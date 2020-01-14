@@ -5,6 +5,23 @@
   right: 0;
 }
 
+.recall {
+  padding: 0;
+  position: relative;
+  display: none;
+  background: url("../images/phone-call.svg") center no-repeat, white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  &:after {
+    content: url("../images/dots.svg");
+    position: absolute;
+    bottom: -95px;
+    left: 3px;
+  }
+}
+
 .header {
   color: $color-white;
   display: flex;
@@ -33,6 +50,10 @@
     }
   }
 
+  .language-selector {
+    display: none;
+  }
+
   .menu {
     .submenu {
       display: none;
@@ -41,7 +62,7 @@
     .menu-list {
       width: 100%;
 
-      margin-top: 5px;
+      margin-top: 55px;
 
       padding: 0;
       list-style: none;
@@ -51,6 +72,10 @@
         display: none;
         margin: 20px 0;
 
+        &:not(.hamburger-button) {
+          margin: 60px 0 20px 30px;
+        }
+
         &.hide {
           display: none;
         }
@@ -59,26 +84,13 @@
           display: block;
           color: inherit;
           text-decoration: none;
-          font-weight: bold;
-          font-size: $fz-medium;
+          font-size: 30px;
 
           padding: 13px 10px 15px;
 
-          &.recall {
-            padding: 0;
-            position: relative;
-            width: 100%;
-
-            &:before {
-              content: url("../images/recall.svg");
-            }
-
-            &:after {
-              content: url("../images/dots.svg");
-              position: absolute;
-              bottom: -95px;
-              left: 3px;
-            }
+          &.phone-number {
+            font-size: 17px;
+            font-weight: 500;
           }
         }
       }
@@ -92,8 +104,41 @@
     }
 
     &.opened {
+      .language-selector {
+        display: flex;
+
+        .language {
+          margin-left: 0;
+          margin-right: 15px;
+        }
+      }
+
+      .header-bottom-box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        z-index: 999;
+
+        height: 100px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 30px 30px;
+
+        .recall {
+          background-color: #ffdb60;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+
       color: #2d2c28;
-      background: url("../images/vault-menu-77.svg") 128% 100% no-repeat, white;
+      background: white;
 
       z-index: 888;
       position: fixed;
@@ -115,6 +160,11 @@
         .menu-item {
           display: block;
           flex-basis: 45%;
+          margin-left: 0;
+
+          &:first-child {
+            margin-top: 150px;
+          }
 
           .hamburger {
             .hamburger-inner,
@@ -122,6 +172,10 @@
             ::before {
               background-color: $color-gray;
             }
+          }
+
+          .recall {
+            display: none;
           }
         }
       }
@@ -131,13 +185,22 @@
       }
 
       .recall {
-        display: none;
+        display: block;
       }
     }
   }
 }
 
 @include desktop {
+  .header .menu .menu-list .menu-item .menu-link {
+    font-weight: bold;
+    font-size: 16px;
+
+    &.recall {
+      display: block;
+    }
+  }
+
   .header {
     padding-top: 19px;
     padding-bottom: 0;
@@ -147,7 +210,7 @@
         .logo {
           height: 48px;
         }
-  
+
         .tagline {
           display: block;
           font-size: 13px;
@@ -156,7 +219,7 @@
         }
       }
     }
-    
+
     .menu {
       .toggle {
         display: none;
@@ -174,6 +237,7 @@
       }
 
       .menu-list {
+        margin-top: 5px;
         position: static;
         display: flex;
         align-items: center;
@@ -201,12 +265,7 @@
         }
 
         .menu-item.hamburger-button {
-          display: block;
-          position: initial;
-          margin-left: 25px;
-          right: 20px;
-          margin: 20px;
-          top: 40px;
+          display: none;
         }
       }
 
@@ -246,13 +305,6 @@
         .menu-list {
           padding-top: 120px;
           padding-bottom: 120px;
-
-          .menu-item.hamburger-button {
-            text-align: right;
-            position: absolute;
-            right: 20px;
-            margin: 20px;
-          }
         }
       }
     }

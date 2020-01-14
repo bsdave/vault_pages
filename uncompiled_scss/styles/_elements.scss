@@ -101,5 +101,12 @@
       opacity: 1;
     }
   }
+
+  &.dark {
+    .language {
+
+      color: #282A2D;
+    }
+  }
 }
 
