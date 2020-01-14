@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <script src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+  <script src="assets/javascript/slick.js"></script>
+  <script src="assets/javascript/main.js"></script>
+  <title>Main page</title>
+</head>
+
+<body>
+
+  <div class="header-box">
+    <div class="container">
+      <header class="header">
+        <a class="logo-link" href="#">
+          <div class="logo-box">
+            <img class="logo" src="assets/images/logo.svg" alt="Logo">
+            <span class="tagline">Школа программирования</span>
+          </div>
+        </a>
+
+        <nav class="menu">
+          <div class="container">
+            <div class="menu-flexbox">
+              <ul class="menu-list">
+                <li class="menu-item"><a href="#" class="menu-link">Ruby</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Python</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Базовый курс</a></li>
+
+                <li class="menu-item"><a href="" class="menu-link recall open-modal-by-id" data-modal-id="recall"></a>
+                </li>
+
+                <li class="menu-item"><a href="tel:+77785007873" class="menu-link phone-number">+7 778 500 78 73</a>
+                </li>
+
+                <li class="menu-item hamburger-button">
+                  <button class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                  </button>
+                </li>
+
+              </ul>
+
+              <div class="header-bottom-box">
+                <ul class="language-selector dark">
+                  <li class="language">АНГЛ</li>
+                  <li class="language active">РУС</li>
+                </ul>
+
+                <a href="#" class="menu-link recall"></a>
+              </div>
+            </div>
+          </div>
+
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <div class="exception-box">
+    <div class="exception e500">
+
+      <div class="exception-body">
+        <p class="message">Ой, что-то пошло не так :(</p>
+
+        <a href="#" class="button yellow">Вернуться обратно</a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal recall-modal opened" id="recall">
+    <div class="modal-body">
+      <span class="close-modal"></span>
+      <h3 class="modal-title">Проверь себя!</h3>
+      <p class="modal-text">Пройдите наш тест и узнайте свой уровень в программировании</p>
+
+      <div class="modal-lead-form">
+        <form class="lead-form" action="/leads">
+          <div class="input-group">
+            <input class="input" type="email" placeholder="Имя">
+          </div>
+
+          <div class="input-group">
+            <input class="input" type="email" placeholder="Номер">
+          </div>
+
+          <div class="input-group">
+            <input class="input" type="email" placeholder="E-mail">
+          </div>
+
+          <div class="input-group">
+            <button class="button" type="submit">Хочу стать лучшим</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -39,7 +39,13 @@ $(function () {
   });
 
   $('.close-modal').on('click', function () {
+    $('body').removeClass('darkened');
     $(this).parents('.modal').toggleClass('opened');
+  });
+
+  $('.open-modal-by-id').on('click', function (event) {
+    event.preventDefault();
+    openModal($(`#${$(this).data().modalId}`));
   });
 
   $('.carousel-body').slick({
@@ -77,8 +83,10 @@ const findAnchorPosition = (anchorNumber) => {
 }
 
 const activateFirstItem = () => {
-  // $('.horizontal-scrolling-controls .control:first-child').click();
   $('.horizontal-scrolling-controls .control:nth-child(3)').click();
+}
 
-
+const openModal = (modal) => {
+  $('body').addClass('darkened');
+  modal.addClass('opened');
 }
