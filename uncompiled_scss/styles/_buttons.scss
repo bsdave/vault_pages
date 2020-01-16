@@ -33,6 +33,12 @@
       right: -73px;
     }
   }
+  
+  &.auto-width {
+    width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
 }
 
 @include desktop {

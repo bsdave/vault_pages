@@ -1,0 +1,24 @@
+.announce-box {
+  .announce {
+    margin-bottom: 40px;
+
+    .announce-img {
+    }
+
+    .announce-text {
+    }
+  }
+}
+
+@include desktop {
+  .advantages {
+    .announce {
+      .announce-img {
+      }
+
+      .announce-text {
+        margin-top: 50px;
+      }
+    }
+  }
+}

@@ -21,19 +21,6 @@ $(function () {
     )
   })
 
-  $('.horizontal-scrolling-controls a').bind('click', function (event) {
-    event.preventDefault();
-    $('html, body').stop();
-    const anchor = $(this).attr('href');
-
-    moveToAnchor(anchor);
-
-    $('.control').removeClass('active');
-    $(this).addClass('active');
-  });
-
-  activateFirstItem();
-
   $('.certificate').on('click', function () {
     $(this).toggleClass('active');
   });
@@ -56,35 +43,12 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 3000,
   });
+
+  $('.controller').slick({
+    vertical: true,
+    slidesToShow: 3
+  });
 });
-
-const moveToAnchor = (anchor) => {
-  const anchorNumber = anchor.match(/\d+/g).map(Number)[0];
-
-  $('.horizontal-scrolling-content').stop().animate({
-    scrollLeft: findAnchorPosition(anchorNumber)
-  }, 1000);
-}
-
-const getContainerIndent = (container) => {
-  const margin = parseInt(container.css('margin-left'));
-  const padding = parseInt(container.css('padding-left'));
-
-  return margin + padding;
-}
-
-const findAnchorPosition = (anchorNumber) => {
-  const indent = getContainerIndent($('.horizontal-scrolling-container'));
-  $('.scrolling-item').css('margin-right', indent);
-
-  const itemFullWidth = $('.scrolling-item').width() + indent;
-
-  return (anchorNumber - 1) * itemFullWidth;
-}
-
-const activateFirstItem = () => {
-  $('.horizontal-scrolling-controls .control:nth-child(3)').click();
-}
 
 const openModal = (modal) => {
   $('body').addClass('darkened');

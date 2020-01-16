@@ -5,6 +5,10 @@
   right: 0;
 }
 
+.header-menu-logo {
+  display: none;
+}
+
 .recall {
   padding: 0;
   position: relative;
@@ -104,6 +108,13 @@
     }
 
     &.opened {
+      .header-menu-logo {
+        display: block;
+        position: absolute;
+        top: 27px;
+        left: 25px;
+      }
+
       .language-selector {
         display: flex;
 

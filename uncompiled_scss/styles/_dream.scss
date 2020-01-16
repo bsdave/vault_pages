@@ -1,0 +1,31 @@
+.dream-box {
+  .dream {
+    margin-bottom: 40px;
+
+    padding: 50px;
+    background: url("../images/small-logo.svg") center 20px no-repeat, url("../images/dream-vault.svg") no-repeat;
+    background-size: 50px, cover;
+    border-radius: 15px;
+
+    .title,
+    .description {
+      font-size: 18px;
+      color: #282a2d;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include desktop {
+  .dream-box {
+    .dream {
+      background: url("../images/small-logo.svg") 20px 20px no-repeat, url("../images/dream-vault.svg") no-repeat;
+      background-size: 50px, cover;
+
+      .title,
+      .description {
+        font-size: 20px;
+      }
+    }
+  }
+}

@@ -41,16 +41,16 @@
 .gradient-yellow::before {
   background: -moz-linear-gradient(
     -45deg,
-    rgba(216, 179, 52, 1) 0%,
-    rgba(216, 179, 52, 0.67) 100%
+    rgba(255, 212, 65, 1) 0%,
+    rgba(255, 212, 65, 0.67) 100%
   );
   background: -webkit-linear-gradient(
     -45deg,
-    rgba(216, 179, 52, 1) 0%,
-    rgba(216, 179, 52, 0.67) 100%
+    rgba(255, 212, 65, 1) 0%,
+    rgba(255, 212, 65, 0.67) 100%
   );
-  background: linear-gradient(135deg, rgba(216, 179, 52, 1) 0%, rgba(216, 179, 52, 0.67) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3a3a', endColorstr='#abff3a3a',GradientType=1 );
+  background: linear-gradient(135deg, rgba(255, 212, 65, 1) 0%, rgba(255, 212, 65, 0.67) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFD441', endColorstr='#FFD441',GradientType=1 );
 }
 
 .gradient-blue-to-red::before {
