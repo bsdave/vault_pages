@@ -45,12 +45,37 @@ $(function () {
   });
 
   $('.controller').slick({
+    speed: 300,
     vertical: true,
-    slidesToShow: 3
+    verticalSwiping: true,
+    slidesToShow: 1,
+    asNavFor: '.graduates',
+    centerMode: true,
+    focusOnSelect: true,
+    centerPadding: "75%"
+  });
+
+  $('.graduates').slick({
+    speed: 300,
+    slidesToShow: 1,
+    arrows: false,
+    asNavFor: '.controller',
+  });
+
+  changePreview();
+
+  $('.graduates').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    changePreview();
   });
 });
 
 const openModal = (modal) => {
   $('body').addClass('darkened');
   modal.addClass('opened');
+}
+
+const changePreview = () => {
+  const src = $('.slick-current .graduate-image-box img').attr('src');
+
+  $('.current-slide-img img.slide-img').attr('src', src);
 }

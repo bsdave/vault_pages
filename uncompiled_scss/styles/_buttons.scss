@@ -39,6 +39,19 @@
     padding-left: 45px;
     padding-right: 45px;
   }
+
+  &.bottom-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      display: inline-block;
+      content: url("../images/bot-arrow.svg");
+      margin-bottom: 1px;
+      margin-left: 5px;
+    }
+  }
 }
 
 @include desktop {
