@@ -1,23 +1,44 @@
 .announce-box {
+  margin-bottom: 50px;
+
   .announce {
     margin-bottom: 40px;
 
     .announce-img {
+      margin-bottom: 30px;
     }
 
     .announce-text {
+      .description {
+        color: #83878f;
+        font-size: 15px;
+        line-height: 1.8;
+      }
     }
   }
 }
 
 @include desktop {
-  .advantages {
+  .announce-box {
+    margin-bottom: 50px;
+
     .announce {
+      margin-bottom: 40px;
+
       .announce-img {
+        margin-bottom: 30px;
+
+        .img-block {
+          max-height: 400px;
+        }
       }
 
       .announce-text {
-        margin-top: 50px;
+        margin-top: 60px;
+
+        .description {
+          font-size: 20px;
+        }
       }
     }
   }

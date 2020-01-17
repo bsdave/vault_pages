@@ -226,7 +226,7 @@
     }
 
     .first-screen-control {
-      display: block;
+      display: none;
       position: relative;
       z-index: 10;
       margin-bottom: -18px;
@@ -308,7 +308,7 @@
     }
 
     .first-screen-control {
-      display: block;
+      display: none;
       position: absolute;
       z-index: 10;
       bottom: 65px;

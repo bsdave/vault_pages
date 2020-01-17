@@ -1,5 +1,5 @@
 .slick-slide {
-  outline: none
+  outline: none;
 }
 
 .graduates-box {
@@ -67,7 +67,7 @@
 
 .current-slide-img {
   margin-left: -25px;
-  
+
   .slide-img {
     border-radius: 50%;
     height: 198px;
@@ -133,8 +133,26 @@
 
 @include tablet {
   .graduates-box {
-    padding-top: 138px;
-    padding-bottom: 123px;
+    .graduates-body {
+      .graduates {
+        .graduate {
+          .graduate-image-box {
+            display: block;
+            .image {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .graduates-box {
+    padding-top: 118px;
+    padding-bottom: 83px;
     margin-bottom: -10px;
 
     background: url("../images/about-us-center-bg.png") left center no-repeat;
@@ -228,5 +246,3 @@
     }
   }
 }
-
-

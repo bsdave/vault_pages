@@ -35,6 +35,10 @@ $(function () {
     openModal($(`#${$(this).data().modalId}`));
   });
 
+  $('.faq-head').on('click', function (event) {
+    $(this).parents('.faq').toggleClass('is-opened');
+  });
+
   $('.carousel-body').slick({
     nextArrow: $('.next-course'),
     dots: true,
