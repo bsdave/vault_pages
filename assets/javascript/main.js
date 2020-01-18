@@ -49,18 +49,18 @@ $(function () {
   });
 
   $('.controller').slick({
-    speed: 300,
+    speed: 250,
     vertical: true,
     verticalSwiping: true,
     slidesToShow: 1,
     asNavFor: '.graduates',
     centerMode: true,
     focusOnSelect: true,
-    centerPadding: "75%"
+    centerPadding: "74%"
   });
 
   $('.graduates').slick({
-    speed: 300,
+    speed: 250,
     slidesToShow: 1,
     arrows: false,
     asNavFor: '.controller',
