@@ -79,6 +79,52 @@
   }
 }
 
+.align-right {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.rocket,
+.calendar,
+.wallet {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 21px;
+    width: 21px;
+    margin-left: 15px;
+
+    flex-shrink: 0;
+  }
+}
+
+.pr0 {
+  padding-right: 0 !important;
+}
+
+.rocket {
+  &::after {
+    background: url('../images/rocket-gray.svg') center no-repeat;
+  }
+}
+
+.calendar {
+  &::after {
+    background: url('../images/calendar-gray.svg') center no-repeat;
+  }
+}
+
+.wallet {
+  &::after {
+    background: url('../images/wallet-gray.svg') center no-repeat;
+  }
+}
+
 .dark-theme {
   a,
   p,
@@ -125,12 +171,12 @@
 
     &::after {
       display: block;
-      background-image: url('../images/button-arrow.svg');
+      background-image: url("../images/button-arrow.svg");
       transform: scaleX(-1) rotate(90deg);
       margin: 0;
       height: 15px;
       width: 15px;
-      
+
       position: absolute;
       right: -20px;
       top: -1px;

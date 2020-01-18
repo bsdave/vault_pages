@@ -335,7 +335,7 @@
 
     .first-screen-body {
       padding-top: 35px;
-      padding-bottom: 280px;
+      padding-bottom: 330px;
       min-height: 700px;
     }
 
@@ -413,6 +413,30 @@
 
         .left {
           padding: 20px 40px;
+          text-align: right;
+
+          font-size: 20px;
+          color: #928f87;
+        }
+
+        .right {
+          height: 100%;
+
+          .img-block {
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+
+      .align-right-elements {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+
+        .left {
+          padding: 40px 40px 30px;
           text-align: right;
 
           font-size: 20px;
