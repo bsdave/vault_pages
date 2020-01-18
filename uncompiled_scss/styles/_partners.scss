@@ -45,6 +45,11 @@
     background: url("../images/ruby-lang.svg") 50% 60px  no-repeat;
     background-size: auto;
 
+    &.python {
+      background: url("../images/python-lang.svg") 50% 60px  no-repeat;
+      background-size: 70%;
+    }
+
     padding-top: 120px;
     margin-bottom: 0;
 
