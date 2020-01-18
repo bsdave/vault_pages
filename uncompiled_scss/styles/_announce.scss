@@ -1,0 +1,65 @@
+.announce-box {
+  margin-bottom: 50px;
+
+  .announce {
+    margin-bottom: 40px;
+
+    .announce-img {
+      margin-bottom: 30px;
+    }
+
+    .announce-text {
+      .description {
+        color: #83878f;
+        font-size: 15px;
+        line-height: 1.8;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .announce-box {
+    margin-bottom: 100px;
+
+    .announce {
+      margin-bottom: 40px;
+
+      .announce-img {
+        margin-bottom: 30px;
+
+        .img-block {
+          max-height: 400px;
+        }
+      }
+
+      .announce-text {
+        margin-top: 60px;
+
+        .description {
+          font-size: 20px;
+        }
+      }
+    }
+
+    &.language-course {
+      background: url('../images/double-circles-lg.svg') 95% center no-repeat;
+
+      .announce-img {
+        margin-bottom: 30px;
+
+        .img-block {
+          max-height: 500px;
+        }
+      }
+
+      .announce-text {
+        margin-top: 80px;
+
+        .description {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

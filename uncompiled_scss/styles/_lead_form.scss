@@ -65,14 +65,31 @@
 
     color: #2d2c28;
     background: #f3d057;
+
+    &::placeholder {
+      color: #907e3f;
+    }
+
+    &:hover {
+      background: #e6c247;
+
+      &::placeholder {
+        color: #655931;
+      }
+    }
+
+    &:focus {
+      background: #e6c247;
+      color: #2D2C28;
+
+      &::placeholder {
+        color: #2D2C28;
+      }
+    }
   }
 
   .button {
     width: 100%;
-  }
-
-  ::placeholder {
-    color: #2d2c28;
   }
 }
 
@@ -97,12 +114,16 @@
 
       .lead-form {
         padding: 0;
+
+        .input-group {
+          margin-bottom: 30px;
+        }
       }
     }
 
     &.footer {
       background: url("../images/footer-form-bg.png") top center no-repeat;
-      background-size: 100% 100%;
+      background-size: cover;
       padding: 165px 0 50px;
     }
 

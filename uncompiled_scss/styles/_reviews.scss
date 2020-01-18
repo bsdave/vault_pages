@@ -32,6 +32,41 @@
         height: 70px;
         width: 70px;
       }
+
+      .social-links {
+        position: absolute;
+        z-index: 55;
+        top: -20px;
+        right: 30px;
+
+        display: flex;
+
+        .social-link {
+          display: block;
+          height: 40px;
+          width: 40px;
+
+          margin-left: 10px;
+          border-radius: 50%;
+
+          &.facebook {
+            background: url('../images/facebook-icon.svg') center no-repeat, #FFDB60;
+          }
+
+          &.instagram {
+            background: url('../images/instagram-icon.svg') center no-repeat, #FFDB60;
+          }
+
+          &.vk {
+            background: url('../images/vk-icon.svg') center no-repeat, #FFDB60;
+          }
+
+          transition: 300ms;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
       
       .reviewer-name {
         margin-top: 0;

@@ -17,6 +17,8 @@
       filter: grayscale(100%);
       margin-bottom: 10px;
 
+      overflow: hidden;
+
       display: flex;
 
       > * {
@@ -27,6 +29,12 @@
         box-shadow: 0 0 60px 0 #928f8752;
         filter: none;
       }
+
+      .partner-logo {
+        display: block;
+        width: 80%;
+        height: auto;
+      }
     }
   }
 }
@@ -34,8 +42,13 @@
 @include desktop {
   .partners-box {
     margin-bottom: 50px;
-    background: url("../images/partners-bg.svg") 77% 100% no-repeat;
+    background: url("../images/ruby-lang.svg") 50% 60px  no-repeat;
     background-size: auto;
+
+    &.python {
+      background: url("../images/python-lang.svg") 50% 60px  no-repeat;
+      background-size: 70%;
+    }
 
     padding-top: 120px;
     margin-bottom: 0;

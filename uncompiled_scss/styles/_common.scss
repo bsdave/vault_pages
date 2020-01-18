@@ -29,6 +29,166 @@
   }
 }
 
-@include desktop {
+.overflow-visible {
+  overflow: visible !important;
+}
 
+.box-head {
+  text-align: center;
+
+  .subtitle {
+    color: #2d2c28;
+    opacity: 0.5;
+    font-size: 14px;
+
+    letter-spacing: 1px;
+    line-height: 1.3;
+
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.button {
+  &.button-arrow {
+    font-size: 13px;
+    text-transform: uppercase;
+    background: #ffdb60;
+    color: #2d2c28;
+
+    padding: 12px 35px 11px 42px;
+    width: auto;
+
+    &::after {
+      content: "";
+      margin-left: 5px;
+      padding-bottom: 12px;
+
+      width: 20px;
+      height: 8px;
+      display: inline-block;
+
+      background: url("../images/button-arrow.svg") center no-repeat;
+    }
+
+    &:active {
+      &::after {
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
+.align-right {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.rocket,
+.calendar,
+.wallet {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 21px;
+    width: 21px;
+    margin-left: 15px;
+
+    flex-shrink: 0;
+  }
+}
+
+.pr0 {
+  padding-right: 0 !important;
+}
+
+.rocket {
+  &::after {
+    background: url('../images/rocket-gray.svg') center no-repeat;
+  }
+}
+
+.calendar {
+  &::after {
+    background: url('../images/calendar-gray.svg') center no-repeat;
+  }
+}
+
+.wallet {
+  &::after {
+    background: url('../images/wallet-gray.svg') center no-repeat;
+  }
+}
+
+.dark-theme {
+  a,
+  p,
+  span,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #2d2c28 !important;
+  }
+
+  .logo-box .logo {
+    content: url("../images/black-logo.svg");
+    height: 45px;
+    width: auto;
+  }
+
+  .hamburger {
+    .hamburger-box {
+      .hamburger-inner {
+        &::before,
+        &::after {
+          background-color: #2d2c28 !important;
+        }
+      }
+    }
+
+    &.is-active {
+      .hamburger-inner {
+        background-color: #2d2c28 !important;
+
+        &::before,
+        &::after {
+          background-color: #2d2c28 !important;
+        }
+      }
+    }
+  }
+
+  .link-to-bottom {
+    position: relative;
+
+    &::after {
+      display: block;
+      background-image: url("../images/button-arrow.svg");
+      transform: scaleX(-1) rotate(90deg);
+      margin: 0;
+      height: 15px;
+      width: 15px;
+
+      position: absolute;
+      right: -20px;
+      top: -1px;
+    }
+  }
+
+  .language-selector {
+    .language {
+      color: #2d2c28 !important;
+    }
+  }
+}
+
+@include desktop {
 }

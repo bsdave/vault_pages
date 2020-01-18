@@ -21,51 +21,84 @@ $(function () {
     )
   })
 
-  $('.horizontal-scrolling-controls a').bind('click', function (event) {
-    event.preventDefault();
-    $('html, body').stop();
-    const anchor = $(this).attr('href');
-
-    moveToAnchor(anchor);
-
-    $('.control').removeClass('active');
-    $(this).addClass('active');
-  });
-
-  activateFirstItem();
-
   $('.certificate').on('click', function () {
     $(this).toggleClass('active');
   });
+
+  $('.close-modal').on('click', function () {
+    $('body').removeClass('darkened');
+    $(this).parents('.modal').toggleClass('opened');
+  });
+
+  $('.open-modal-by-id').on('click', function (event) {
+    event.preventDefault();
+    openModal($(`#${$(this).data().modalId}`));
+  });
+
+  $('.faq-head').on('click', function (event) {
+    $(this).parents('.faq').toggleClass('is-opened');
+  });
+
+  $('.program-head').on('click', function (event) {
+    $(this).parents('.program').toggleClass('is-opened');
+  });
+
+  $('.carousel-body').slick({
+    nextArrow: $('.next-course'),
+    dots: true,
+    appendDots: '.slides-control',
+    speed: 800,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  });
+
+  $('.controller').slick({
+    speed: 250,
+    vertical: true,
+    verticalSwiping: true,
+    slidesToShow: 1,
+    asNavFor: '.graduates',
+    centerMode: true,
+    focusOnSelect: true,
+    centerPadding: "75%",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerPadding: "85%"
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerPadding: "85%"
+        }
+      }
+    ],
+    
+  });
+
+  $('.graduates').slick({
+    speed: 250,
+    slidesToShow: 1,
+    arrows: false,
+    asNavFor: '.controller',
+  });
+
+  changePreview();
+
+  $('.graduates').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    changePreview();
+  });
 });
 
-const moveToAnchor = (anchor) => {
-  const anchorNumber = anchor.match(/\d+/g).map(Number)[0];
-
-  $('.horizontal-scrolling-content').stop().animate({
-    scrollLeft: findAnchorPosition(anchorNumber)
-  }, 1000);
+const openModal = (modal) => {
+  $('body').addClass('darkened');
+  modal.addClass('opened');
 }
 
-const getContainerIndent = (container) => {
-  const margin = parseInt(container.css('margin-left'));
-  const padding = parseInt(container.css('padding-left'));
+const changePreview = () => {
+  const src = $('.slick-current .graduate-image-box img').attr('src');
 
-  return margin + padding;
-}
-
-const findAnchorPosition = (anchorNumber) => {
-  const indent = getContainerIndent($('.horizontal-scrolling-container'));
-  $('.scrolling-item').css('margin-right', indent);
-
-  const itemFullWidth = $('.scrolling-item').width() + indent;
-
-  return (anchorNumber - 1) * itemFullWidth;
-}
-
-const activateFirstItem = () => {
-  // $('.horizontal-scrolling-controls .control:first-child').click();
-  $('.horizontal-scrolling-controls .control:nth-child(3)').click();
-
-
+  $('.current-slide-img img.slide-img').attr('src', src);
 }
