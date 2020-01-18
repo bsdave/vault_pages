@@ -1,0 +1,206 @@
+.course-program-box {
+  margin-bottom: 50px;
+
+  .modul,
+  .time {
+    text-transform: uppercase;
+    color: #928f87;
+    font-weight: bold;
+    margin: 0 20px;
+    font-size: 13px;
+
+    position: relative;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 16px;
+
+      background: red;
+
+      margin-right: 10px;
+      position: absolute;
+      bottom: 0px;
+      left: -25px;
+    }
+  }
+
+  .modul {
+    &:before {
+      background: url('../images/modul.svg') center no-repeat;
+    }
+  }
+
+  .time {
+    &:before {
+      background: url('../images/date.svg') center no-repeat;
+    }
+  }
+
+  .box-head {
+    padding: 0 20%;
+
+    .subtitle {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+  .course-program {
+    .course-body {
+      box-shadow: 0 10px 60px 0 #928f8752;
+      border-radius: 15px;
+
+      .program {
+        border-bottom: 1px solid #f3f0e7;
+      }
+    }
+
+    .program-title {
+      margin-top: 50px;
+
+      .title {
+        font-size: 30px;
+        color: #2d2c28;
+        margin-top: 10px;
+        margin-bottom: 25px;
+      }
+    }
+
+    .program {
+      .program-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 30px;
+
+        cursor: pointer;
+
+        .title {
+          font-size: 18px;
+          color: #282a2d;
+          margin: 0;
+        }
+
+        &::after {
+          content: url("../images/bot-arrow.svg");
+          margin-left: 30px;
+        }
+      }
+
+      .program-body {
+        padding: 0 30px 30px;
+        display: none;
+
+        .description {
+          font-size: 15px;
+          color: #928f87;
+        }
+      }
+
+      &.is-opened {
+        box-shadow: 0 10px 60px 0 #928f8752;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        border-radius: 15px;
+
+        .program-body {
+          display: block;
+        }
+
+        .program-head {
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .course-program-box {
+    margin-bottom: 80px;
+
+    .box-head {
+      padding: 0 20%;
+
+      .subtitle {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+
+    .course-program {
+      .course-body {
+        box-shadow: none;
+        border-radius: none;
+
+        .program {
+          border-bottom: none;
+        }
+      }
+
+      .programs-box {
+        box-shadow: 0 10px 60px 0 #928f8752;
+        border-radius: 15px;
+
+        .program {
+          &:not(:last-child) {
+            border-bottom: 1px solid #f3f0e7;
+          }
+        }
+      }
+
+      .program {
+        .program-head {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          padding: 30px;
+
+          cursor: pointer;
+
+          .title {
+            font-size: 20px;
+            color: #282a2d;
+            margin: 0;
+          }
+
+          &::after {
+            content: url("../images/bot-arrow.svg");
+            margin-left: 30px;
+          }
+        }
+
+        .program-body {
+          padding: 0 110px 30px 30px;
+          display: none;
+
+          .description {
+            font-size: 20px;
+          }
+        }
+
+        &.is-opened {
+          box-shadow: 0 10px 60px 0 #928f8752;
+          margin-top: -1px;
+          margin-bottom: -1px;
+
+          .program-body {
+            display: block;
+          }
+
+          .program-head {
+            &::after {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

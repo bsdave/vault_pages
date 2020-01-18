@@ -1,0 +1,40 @@
+.study-place-box {
+  background: url("../images/vault.svg") center 30px no-repeat;
+  background-size: 120%;
+  margin-bottom: 60px;
+
+  .study-place {
+    .about-place {
+      .title {
+        font-size: 18px;
+        color: #282a2d;
+      }
+
+      .description {
+        font-size: 15px;
+        color: #83878f;
+      }
+    }
+  }
+}
+
+@include desktop {
+  .study-place-box {
+    background: url("../images/vault.svg") center top no-repeat, url("../images/place.png") 47% 78% no-repeat;
+    background-size: 70%, 400px;
+    margin-bottom: 80px;
+    padding-top: 50px;
+
+    .study-place {
+      .about-place {
+        .title {
+          font-size: 25px;
+        }
+
+        .description {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

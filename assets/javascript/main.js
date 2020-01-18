@@ -39,6 +39,10 @@ $(function () {
     $(this).parents('.faq').toggleClass('is-opened');
   });
 
+  $('.program-head').on('click', function (event) {
+    $(this).parents('.program').toggleClass('is-opened');
+  });
+
   $('.carousel-body').slick({
     nextArrow: $('.next-course'),
     dots: true,
@@ -56,7 +60,22 @@ $(function () {
     asNavFor: '.graduates',
     centerMode: true,
     focusOnSelect: true,
-    centerPadding: "74%"
+    centerPadding: "75%",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          centerPadding: "85%"
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          centerPadding: "85%"
+        }
+      }
+    ],
+    
   });
 
   $('.graduates').slick({
